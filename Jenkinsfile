@@ -11,7 +11,8 @@ pipeline {
                 }
                 }
 		
-		
+		  stage(‘deploy’) {
+			  parallel {
 		stage(‘deploy1’) {
 		
                 steps {
@@ -29,7 +30,8 @@ pipeline {
 			'''
                 }
                 }
-		
+			  }
+		  }
        stage (‘Test’) {
 	
        steps {
